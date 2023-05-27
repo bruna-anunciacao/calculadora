@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary-color: #0b8770;
+    --secondary-color: #314d4a;
+    --background-color: #a6c288;
+    --light-color: #f0f0d8;
+    --display-color: #17181f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--background-color);
+}
+
+.App {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.calculator {
+    width: 100%;
+    background-color: var(--light-color);
+    max-width: 29rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0.3rem 0.3rem 2rem rgba(0,0,0,0.5);
+}
+
+.display {
+    padding: 1.5rem;
+    text-align: right;
+    background-color: var(--display-color);
+    color: var(--light-color);
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.display span {
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+.buttons-design {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    background: var(--secondary-color);
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.operator {
+    display: flex;
+    flex-direction: column;
+}
+
+.operator button{
+    flex: 1 1 0%;
+    background: var(--primary-color);
+    padding: 1rem 2.5rem;
+}
+
+.digit {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.digit button {
+    flex: 1 1 33.333%;
+    max-width: 33.333%;
+}
